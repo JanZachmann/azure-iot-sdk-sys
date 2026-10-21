@@ -6,3 +6,4 @@
 #include <azureiot/iothub_module_client.h>
 #include <azureiot/iothub_device_client.h>
 #include <azureiot/iothubtransportmqtt.h>
+#include <c_logging/logger.h>
