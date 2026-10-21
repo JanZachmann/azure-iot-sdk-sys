@@ -69,17 +69,7 @@ fn main() {
 
     println!("cargo:rustc-link-lib=uhttp");
     println!("cargo:rustc-link-lib=aziotsharedutil");
-
-    // TODO: remove me and link c_logging_v2 always, as soon as no build uses azure-iot-sdk-c older than LTS_10_2026
-    let c_logging_found = link_paths.iter().any(|p| {
-        [p.join("lib"), p.clone()]
-            .iter()
-            .any(|dir| dir.join("libc_logging_v2.a").exists())
-    });
-    if c_logging_found {
-        println!("cargo:rustc-link-lib=c_logging_v2");
-    }
-
+    println!("cargo:rustc-link-lib=c_logging_v2");
     println!("cargo:rustc-link-lib=curl");
     println!("cargo:rustc-link-lib=ssl");
     println!("cargo:rustc-link-lib=crypto");
