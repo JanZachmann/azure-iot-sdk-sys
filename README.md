@@ -26,7 +26,7 @@ We provide debian packages for the following target architectures:
 
 Available debian packages can be listed as a xml document via this [link](https://omnectassetst.blob.core.windows.net/azure-iot-sdk-dev-packages?restype=container&comp=list). Choose the one appropriate for your usecase and platform and download e.g. via:
 ```
-wget https://omnectassetst.blob.core.windows.net/azure-iot-sdk-dev-packages/azure-iot-sdk-dev-1.15.0+lts-10-2026-amd64_deb13.deb
+wget https://omnectassetst.blob.core.windows.net/azure-iot-sdk-dev-packages/azure-<iot|iotedge>-sdk-dev-<sdk version>+<lts tag>-<arch>_<debian release>.deb
 ```
 
 **Note:** The libraries depend on further development libraries that must be installed for the chosen target architecture:
