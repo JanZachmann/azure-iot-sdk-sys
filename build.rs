@@ -100,8 +100,7 @@ fn main() {
         .blocklist_type("time_t")
         .raw_line("pub type time_t = std::os::raw::c_longlong;")
         // rustc warns on these libc declarations: their size_t is generated as c_ulong, not usize
-        .blocklist_function("memcpy|memmove|memset|memcmp|bcmp|strlen|malloc|realloc")
-        .wrap_unsafe_ops(true)
+        .blocklist_function("memcpy|memmove|memset|memcmp|bcmp|strlen")
         // invalidate the built crate whenever any of the included header files changed
         .parse_callbacks(Box::new(bindgen::CargoCallbacks::new()))
         // generate bindings
